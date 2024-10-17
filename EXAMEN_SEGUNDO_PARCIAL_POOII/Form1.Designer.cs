@@ -34,16 +34,17 @@ namespace EXAMEN_SEGUNDO_PARCIAL_POOII
             this.BTNACTUALIZAR = new System.Windows.Forms.Button();
             this.BTNMOSTRAR = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TXBNOMBRE = new System.Windows.Forms.TextBox();
+            this.TXBCORREO = new System.Windows.Forms.TextBox();
+            this.TXBEDAD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.V = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TXBID = new System.Windows.Forms.TextBox();
+            this.TXBFECHADENACIMIENTO = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@ namespace EXAMEN_SEGUNDO_PARCIAL_POOII
             this.BTNAGRAGAR.TabIndex = 0;
             this.BTNAGRAGAR.Text = "AGREGAR";
             this.BTNAGRAGAR.UseVisualStyleBackColor = true;
+      
             // 
             // BTNELIMINAR
             // 
@@ -64,6 +66,7 @@ namespace EXAMEN_SEGUNDO_PARCIAL_POOII
             this.BTNELIMINAR.TabIndex = 1;
             this.BTNELIMINAR.Text = "ELIMINAR";
             this.BTNELIMINAR.UseVisualStyleBackColor = true;
+            this.BTNELIMINAR.Click += new System.EventHandler(this.BTNELIMINAR_Click);
             // 
             // BTNACTUALIZAR
             // 
@@ -73,6 +76,7 @@ namespace EXAMEN_SEGUNDO_PARCIAL_POOII
             this.BTNACTUALIZAR.TabIndex = 2;
             this.BTNACTUALIZAR.Text = "ACTUALIZAR";
             this.BTNACTUALIZAR.UseVisualStyleBackColor = true;
+            this.BTNACTUALIZAR.Click += new System.EventHandler(this.BTNACTUALIZAR_Click);
             // 
             // BTNMOSTRAR
             // 
@@ -82,6 +86,7 @@ namespace EXAMEN_SEGUNDO_PARCIAL_POOII
             this.BTNMOSTRAR.TabIndex = 3;
             this.BTNMOSTRAR.Text = "MOSTRAR";
             this.BTNMOSTRAR.UseVisualStyleBackColor = true;
+            this.BTNMOSTRAR.Click += new System.EventHandler(this.BTNMOSTRAR_Click);
             // 
             // dataGridView1
             // 
@@ -93,101 +98,115 @@ namespace EXAMEN_SEGUNDO_PARCIAL_POOII
             this.dataGridView1.Size = new System.Drawing.Size(1376, 433);
             this.dataGridView1.TabIndex = 4;
             // 
-            // textBox1
+            // TXBNOMBRE
             // 
-            this.textBox1.Location = new System.Drawing.Point(213, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 29);
-            this.textBox1.TabIndex = 5;
+            this.TXBNOMBRE.Location = new System.Drawing.Point(213, 151);
+            this.TXBNOMBRE.Name = "TXBNOMBRE";
+            this.TXBNOMBRE.Size = new System.Drawing.Size(258, 29);
+            this.TXBNOMBRE.TabIndex = 5;
+            
             // 
-            // textBox2
+            // TXBCORREO
             // 
-            this.textBox2.Location = new System.Drawing.Point(863, 264);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 29);
-            this.textBox2.TabIndex = 6;
+            this.TXBCORREO.Location = new System.Drawing.Point(863, 151);
+            this.TXBCORREO.Name = "TXBCORREO";
+            this.TXBCORREO.Size = new System.Drawing.Size(258, 29);
+            this.TXBCORREO.TabIndex = 7;
+            
             // 
-            // textBox3
+            // TXBEDAD
             // 
-            this.textBox3.Location = new System.Drawing.Point(863, 151);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(258, 29);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(213, 264);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 29);
-            this.textBox4.TabIndex = 8;
+            this.TXBEDAD.Location = new System.Drawing.Point(213, 264);
+            this.TXBEDAD.Name = "TXBEDAD";
+            this.TXBEDAD.Size = new System.Drawing.Size(258, 29);
+            this.TXBEDAD.TabIndex = 8;
+        
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(91, 156);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
+            this.label1.Text = "Nombre";
             // 
             // V
             // 
             this.V.AutoSize = true;
             this.V.Location = new System.Drawing.Point(91, 268);
             this.V.Name = "V";
-            this.V.Size = new System.Drawing.Size(64, 25);
+            this.V.Size = new System.Drawing.Size(58, 25);
             this.V.TabIndex = 10;
-            this.V.Text = "label2";
+            this.V.Text = "Edad";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(746, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
+            this.label2.Size = new System.Drawing.Size(72, 25);
             this.label2.TabIndex = 11;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(746, 268);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 25);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "label3";
+            this.label2.Text = "Correo";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(112, 360);
+            this.label4.Location = new System.Drawing.Point(765, 223);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 25);
             this.label4.TabIndex = 13;
             this.label4.Text = "ID";
             // 
-            // textBox5
+            // TXBID
             // 
-            this.textBox5.Location = new System.Drawing.Point(199, 356);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(258, 29);
-            this.textBox5.TabIndex = 14;
+            this.TXBID.Location = new System.Drawing.Point(863, 223);
+            this.TXBID.Name = "TXBID";
+            this.TXBID.Size = new System.Drawing.Size(258, 29);
+            this.TXBID.TabIndex = 14;
+           
+            // 
+            // TXBFECHADENACIMIENTO
+            // 
+            this.TXBFECHADENACIMIENTO.Location = new System.Drawing.Point(213, 357);
+            this.TXBFECHADENACIMIENTO.Name = "TXBFECHADENACIMIENTO";
+            this.TXBFECHADENACIMIENTO.Size = new System.Drawing.Size(258, 29);
+            this.TXBFECHADENACIMIENTO.TabIndex = 15;
+          
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 360);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 25);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "FechaNacimiento";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(824, 320);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(340, 29);
+            this.dateTimePicker1.TabIndex = 17;
+         
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1577, 936);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TXBFECHADENACIMIENTO);
+            this.Controls.Add(this.TXBID);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.V);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TXBEDAD);
+            this.Controls.Add(this.TXBCORREO);
+            this.Controls.Add(this.TXBNOMBRE);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNMOSTRAR);
             this.Controls.Add(this.BTNACTUALIZAR);
@@ -208,16 +227,17 @@ namespace EXAMEN_SEGUNDO_PARCIAL_POOII
         private System.Windows.Forms.Button BTNACTUALIZAR;
         private System.Windows.Forms.Button BTNMOSTRAR;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TXBNOMBRE;
+        private System.Windows.Forms.TextBox TXBCORREO;
+        private System.Windows.Forms.TextBox TXBEDAD;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label V;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TXBID;
+        private System.Windows.Forms.TextBox TXBFECHADENACIMIENTO;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
